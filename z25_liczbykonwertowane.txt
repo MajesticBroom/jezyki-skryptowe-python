@@ -1,0 +1,3 @@
+Liczba konwertowana: 3647
+System oktalny: 7077
+System heksadecymalny: E3F
