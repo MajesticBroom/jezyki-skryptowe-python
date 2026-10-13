@@ -1,0 +1,2 @@
+Losowy element: element08
+Losowa liczba: 16
