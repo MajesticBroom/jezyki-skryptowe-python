@@ -88,6 +88,9 @@ def test_sort(data: list):
     quicksort(x)
     print(f"Po: {x}\n")
 
+def clear_results_file(path: str):
+    with open(path, "w") as result_file:
+        pass
 
 def save_results(path: str, data: list, title: str):
     with open(path, "a") as result_file:
@@ -99,7 +102,12 @@ def save_results(path: str, data: list, title: str):
 try:
     with open("z38_dane.txt") as data_file:
         numbers = [int(el) for el in data_file.readlines()]
+        print("=" * 30)
+        print("Dane do posortowania:")
         print(numbers)
+        print("=" * 30, "\n")
+
+        clear_results_file("z38_posortowane.txt")
 
         x = numbers[:]
         bubble_sort(x)
