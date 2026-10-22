@@ -12,7 +12,7 @@ from datetime import date
 from z38 import bubble_sort, insertion_sort, quicksort
 
 def test_algorithms(numbers: list[list[int]]):
-    with open(f"z40_raport_{date.today()}", "w") as result_file:
+    with open(f"z40_raport_{date.today()}.txt", "w") as result_file:
         result_file.write("RAPORT ALGORYTMÓW SORTOWANIA\n")
         result_file.write("NAZWA -- LICZBA POSORTOWANYCH ELEMENTÓW -- ŚREDNI CZAS -- ODCHYLENIE STANDARDOWE\n")
 

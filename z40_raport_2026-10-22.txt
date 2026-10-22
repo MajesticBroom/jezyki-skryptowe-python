@@ -1,0 +1,5 @@
+RAPORT ALGORYTMÓW SORTOWANIA
+NAZWA -- LICZBA POSORTOWANYCH ELEMENTÓW -- ŚREDNI CZAS -- ODCHYLENIE STANDARDOWE
+1. bąbelkowe -- 5 000 x 3 tablice -- 0.343358 s -- 0.001745 s
+2. wstawianie -- 5 000 x 3 tablice -- 0.163123 s -- 0.001006 s
+3. quick sort -- 5 000 x 3 tablice -- 0.002999 s -- 0.000015 s
