@@ -99,27 +99,28 @@ def save_results(path: str, data: list, title: str):
         result_file.write(", ".join(data))
         result_file.write("\n\n")
 
-try:
-    with open("z38_dane.txt") as data_file:
-        numbers = [int(el) for el in data_file.readlines()]
-        print("=" * 30)
-        print("Dane do posortowania:")
-        print(numbers)
-        print("=" * 30, "\n")
+if __name__ == "__main__":
+    try:
+        with open("z38_dane.txt") as data_file:
+            numbers = [int(el) for el in data_file.readlines()]
+            print("=" * 30)
+            print("Dane do posortowania:")
+            print(numbers)
+            print("=" * 30, "\n")
 
-        clear_results_file("z38_posortowane.txt")
+            clear_results_file("z38_posortowane.txt")
 
-        x = numbers[:]
-        bubble_sort(x)
-        save_results("z38_posortowane.txt", x, "Bubble Sort")
+            x = numbers[:]
+            bubble_sort(x)
+            save_results("z38_posortowane.txt", x, "Bubble Sort")
 
-        y = numbers[:]
-        insertion_sort(y)
-        save_results("z38_posortowane.txt", x, "Insertion Sort")
+            y = numbers[:]
+            insertion_sort(y)
+            save_results("z38_posortowane.txt", x, "Insertion Sort")
 
-        z = numbers[:]
-        quicksort(z)
-        save_results("z38_posortowane.txt", x, "Quicksort")
+            z = numbers[:]
+            quicksort(z)
+            save_results("z38_posortowane.txt", x, "Quicksort")
 
-except FileNotFoundError:
-    print("Nie znaleziono pliku z danymi.")
+    except FileNotFoundError:
+        print("Nie znaleziono pliku z danymi.")
