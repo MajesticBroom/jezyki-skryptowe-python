@@ -5,15 +5,12 @@
 # Zadanie 32.
 # ------------------------------
 
-import cmath
-
 
 # Równanie kwadratowe w ciele liczb zespolonych
 def solve_complex_quadratic_formula(a: complex, b: complex, c: complex):
     delta = b ** 2 - (4 * a * c)
 
-    # print(cmath.sqrt(delta))
-    delta_sqrt = cmath.sqrt(delta)
+    delta_sqrt = delta ** 0.5
 
     x1 = (-b - delta_sqrt) / 2 * a
     x2 = (-b + delta_sqrt) / 2 * a
