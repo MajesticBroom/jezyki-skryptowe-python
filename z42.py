@@ -33,6 +33,7 @@ def find_best_split(chars_with_probs: list):
         right_sum = (total_sum - current_left_sum)
         diff = abs(current_left_sum - right_sum)
 
+        # Szukamy najmniejszej różnicy pomiędzy prawdopodobieństwami podciągów
         if diff < current_smallest_diff:
             current_smallest_diff = diff
             best_split_index = i
@@ -57,6 +58,8 @@ def slice_char_list(chars_with_probs: list):
 
     left_greater = sum_left >= sum_right
 
+    # Indeks "0" otrzymuje zawsze strona, po której
+    # prawdopodobieństwo jest większe
     left_prefix = "0" if left_greater else "1"
     right_prefix = "1" if left_greater else "0"
 
@@ -88,6 +91,9 @@ def shannon_fano_decode(text: str, codes: dict[str, str]):
     result = []
     buffer = ""
 
+    # Przechodzimy bit po bicie, doklejając je do buforu.
+    # Jeśli kod w buforze znajduje się w tablicy kodowej,
+    # dodajemy daną literę do wynikowego tekstu.
     for bit in text:
         buffer += bit
         if buffer in codes_with_chars:
