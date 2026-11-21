@@ -36,3 +36,4 @@ def caesar_cipher(text: str, shift: int, decode: bool = False):
 # caesar_cipher("jcy", 3, True)
 
 caesar_cipher("spider-man", 5)
+caesar_cipher("XUNIJW-RFS", 5, True)
