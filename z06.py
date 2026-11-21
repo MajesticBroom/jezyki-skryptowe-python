@@ -4,8 +4,10 @@
 # ------------------------------
 # Zadanie 6.
 # ------------------------------
+import math
 
-def func(e: float, n: int):
-    print(*[-0.7 * e + 4.07] * n, sep="@")
 
-func(70, 10)
+def func(n: int):
+    print(*[-0.7 * math.e + 4.07] * n, sep="@")
+
+func(10)
