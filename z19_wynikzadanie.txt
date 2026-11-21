@@ -1,2 +1,2 @@
-Losowy element: element08
-Losowa liczba: 16
+Losowy element: element00
+Losowa liczba: 13
